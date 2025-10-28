@@ -12,7 +12,7 @@ def render_summary(params, tasa_efectiva, cuota):
         st.metric("Monto del Crédito", f"${params['monto']:,.2f}")
 
     with col2:
-        tipo_tasa = f"{params['tipo_tasa']} - {params['modalidad_tasa']}"
+        tipo_tasa = f"{params['tipo_tasa']} - {params['modalidad_tasa']} ({params['frecuencia_tasa']})"
         st.metric("Tasa Efectiva Periodo", f"{tasa_efectiva*100:.4f}%", delta=tipo_tasa, delta_color="off")
 
     with col3:
